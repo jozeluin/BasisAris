@@ -1,0 +1,19 @@
+4:56:09
+Terminamos de colocar las primeras cardviews de la primera aplicacion, imcCalculatorApp
+
+5:14:45
+Programacion con un error, de cambio de color de botones de genero al pulsar
+
+5:35:14
+Colocacion de la barra deslizanre , rangeSlider, y formateo del numero para que no salgan
+decimales. Tambien hemos colocado las dos ultimas CardViews
+
+5:48:15
+Colocamos los botones redondos - +, los floatingactionsbuttons, y la pequeña logica para que sume
+o reste el textview del peso
+
+6:08:45
+Hemos colocado el boton con su logica, y nos calcula y sale por un Log
+
+6:12
+Ponemos el Intent, comunicacion entre Activitis
