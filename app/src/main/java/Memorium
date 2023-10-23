@@ -17,3 +17,7 @@ Hemos colocado el boton con su logica, y nos calcula y sale por un Log
 
 6:12
 Ponemos el Intent, comunicacion entre Activitis
+
+6:19:05
+Creamos companion object para llevar intent a ResultImcActivity
+Diseño de layout Result

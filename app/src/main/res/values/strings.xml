@@ -5,4 +5,6 @@
     <string name="height">Altura</string>
     <string name="weight">Peso</string>
     <string name="calculate">CALCULAR</string>
+    <string name="result">Tu resultado</string>
+    <string name="recalculate">Re-Calcular</string>
 </resources>

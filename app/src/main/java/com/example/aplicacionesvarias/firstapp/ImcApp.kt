@@ -36,6 +36,10 @@ class ImcApp : AppCompatActivity() {
     private lateinit var tvAge: TextView
     private lateinit var btnCalculate: Button
 
+    companion object{
+        const val IMC_KEY = "IMC_RESU"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_app)
@@ -105,7 +109,7 @@ class ImcApp : AppCompatActivity() {
 
     private fun navigateToResult(result: Double) {
         val intent = Intent(this,ResultaImcActivity::class.java)
-        intent.putExtra("IMC_RESULT",result)
+        intent.putExtra(IMC_KEY,result)
         startActivity(intent)
     }
 
