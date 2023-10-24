@@ -7,4 +7,22 @@
     <string name="calculate">CALCULAR</string>
     <string name="result">Tu resultado</string>
     <string name="recalculate">Re-Calcular</string>
+
+    <string name="error">Error</string>
+
+    <string name="title_bajo_peso">Bajo peso</string>
+    <string name="descripcion_bajo_peso">Estas segun tu altura por debajo del peso normal</string>
+
+    <string name="title_peso_normal">Peso normal</string>
+    <string name="descripcion_peso_normal">Estas segun tu altura con un peso normal</string>
+
+    <string name="title_sobrepeso">Sobrepeso</string>
+    <string name="descripcion_sobrepeso">Estas segun tu altura por encima del peso normal</string>
+
+    <string name="title_obesidad">Obesidad</string>
+    <string name="descripcion_obesidad">Estas segun tu altura con obesidad</string>
+
+
+
+
 </resources>
