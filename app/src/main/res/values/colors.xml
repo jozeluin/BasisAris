@@ -23,6 +23,7 @@
     <color name="peso_sobrepeso">#FF5722</color>
     <color name="obesidad">#FF1100</color>
 
+
     <!--TodoApp-->
     <color name="todo_background_card">#FF081A4A</color>
     <color name="todo_background_disabled">#787878</color>

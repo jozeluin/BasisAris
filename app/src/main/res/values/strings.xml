@@ -1,4 +1,6 @@
 <resources>
+
+<!--    Imc App-->
     <string name="app_name">AplicacionesVarias</string>
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
@@ -22,7 +24,11 @@
     <string name="title_obesidad">Obesidad</string>
     <string name="descripcion_obesidad">Estas segun tu altura con obesidad</string>
 
+<!--    TodoApp-->
+    <string name="todo_title">Bienvenido Jozel</string>
+    <string name="todo_categorias">Categorias:</string>
 
+    
 
 
 </resources>

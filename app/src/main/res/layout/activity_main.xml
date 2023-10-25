@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
@@ -12,5 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Aplicacion Salud"/>
+
+    <Button
+        android:id="@+id/btnTODO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="TDOD App"/>
+
 
 </LinearLayout>
