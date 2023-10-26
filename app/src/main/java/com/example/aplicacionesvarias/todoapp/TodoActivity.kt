@@ -14,10 +14,20 @@ class TodoActivity : AppCompatActivity() {
         TaskCategory.Other,
 
     )
+    private val task= mutableListOf(
+        Task("PruebaBusiness",TaskCategory.Business),
+        Task("PruebaPersonal",TaskCategory.Personal),
+        Task("PruebaOther",TaskCategory.Other),
+
+    )
+
 
     private lateinit var rvCategories:RecyclerView
     private lateinit var categoriesAdapter: CategoriesAdapter
+
     private lateinit var rvTask:RecyclerView
+    private lateinit var taskAdapter:TasksAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +45,10 @@ class TodoActivity : AppCompatActivity() {
         categoriesAdapter=CategoriesAdapter(categories)
         rvCategories.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         rvCategories.adapter=categoriesAdapter
+
+        taskAdapter=TasksAdapter(task)
+        rvTask.layoutManager=LinearLayoutManager(this)
+        rvTask.adapter=taskAdapter
 
     }
 }
