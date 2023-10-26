@@ -27,6 +27,7 @@
 <!--    TodoApp-->
     <string name="todo_title">Bienvenido Jozel</string>
     <string name="todo_categorias">Categorias:</string>
+    <string name="todo_task">Tareas</string>
 
     
 
