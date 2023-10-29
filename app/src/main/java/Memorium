@@ -43,7 +43,12 @@ Creacion de item_task, del recyclerview horizontal , y el mismo tambien
 7:53
 Creacion del segundo recyclerView, tareas
 
-8:07
+8:27
+Hemos creado el dialog box que aparece al pulsar el floatinbutton. Apartir de ahora
+crearemos su logica
+
+8:43
+Hemos creado la logica en TodoActivy.kt para añadir Tareas
 
 
 

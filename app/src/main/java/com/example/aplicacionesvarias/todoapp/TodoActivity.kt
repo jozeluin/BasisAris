@@ -3,23 +3,28 @@ package com.example.aplicacionesvarias.todoapp
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.aplicacionesvarias.R
+import com.example.aplicacionesvarias.todoapp.TaskCategory.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TodoActivity : AppCompatActivity() {
     private val categories=listOf(
-        TaskCategory.Business,
-        TaskCategory.Personal,
-        TaskCategory.Other,
+        Business,
+        Personal,
+        Other,
 
     )
-    private val task= mutableListOf(
-        Task("PruebaBusiness",TaskCategory.Business),
-        Task("PruebaPersonal",TaskCategory.Personal),
-        Task("PruebaOther",TaskCategory.Other),
+    private val tasks= mutableListOf(
+        Task("PruebaBusiness", Business),
+        Task("PruebaPersonal", Personal),
+        Task("PruebaOther", Other),
 
     )
 
@@ -49,6 +54,33 @@ class TodoActivity : AppCompatActivity() {
     private fun showDialog(){
         val dialog=Dialog(this)
         dialog.setContentView(R.layout.dialog_task)
+
+        val btnAddTas: Button = dialog.findViewById(R.id.btnAddTask)
+        val etTask: EditText = dialog.findViewById(R.id.etTask)
+        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
+
+        btnAddTas.setOnClickListener {
+            val currentask=etTask.text.toString()
+            if(currentask.isNotEmpty()){
+                val selectedId = rgCategories.checkedRadioButtonId
+                val seletedRadioButton:RadioButton = rgCategories.findViewById(selectedId)
+                val currentCategory:TaskCategory= when(seletedRadioButton.text){
+
+                    getString(R.string.todo_dialog_category_Bussines)-> Business
+                    getString(R.string.todo_dialog_category_Personal) -> Personal
+                    else-> Other
+
+                }
+                tasks.add(Task(currentask,currentCategory))
+                updateTasks()
+                dialog.hide()
+            }
+
+
+        }
+
+
+
         dialog.show()
     }
 
@@ -63,9 +95,18 @@ class TodoActivity : AppCompatActivity() {
         rvCategories.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         rvCategories.adapter=categoriesAdapter
 
-        taskAdapter=TasksAdapter(task)
+        taskAdapter=TasksAdapter(tasks)
         rvTask.layoutManager=LinearLayoutManager(this)
         rvTask.adapter=taskAdapter
+
+    }
+
+    /**
+     * Avisa al adaptador que hay nuevos items
+     *
+     */
+    private fun updateTasks(){
+        taskAdapter.notifyDataSetChanged()
 
     }
 }
