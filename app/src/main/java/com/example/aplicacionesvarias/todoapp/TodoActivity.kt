@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.aplicacionesvarias.R
 import com.example.aplicacionesvarias.todoapp.TaskCategory.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.FieldPosition
 
 class TodoActivity : AppCompatActivity() {
     private val categories=listOf(
@@ -68,6 +69,7 @@ class TodoActivity : AppCompatActivity() {
 
                     getString(R.string.todo_dialog_category_Bussines)-> Business
                     getString(R.string.todo_dialog_category_Personal) -> Personal
+
                     else-> Other
 
                 }
@@ -91,21 +93,37 @@ class TodoActivity : AppCompatActivity() {
 
     }
     private fun initUI() {
-        categoriesAdapter=CategoriesAdapter(categories)
+        categoriesAdapter=CategoriesAdapter(categories){updateCategories(it)}
         rvCategories.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         rvCategories.adapter=categoriesAdapter
 
-        taskAdapter=TasksAdapter(tasks)
+        taskAdapter=TasksAdapter(tasks){onItemSelected(it)}
         rvTask.layoutManager=LinearLayoutManager(this)
         rvTask.adapter=taskAdapter
 
     }
+
+    private fun updateCategories(position: Int){
+        categories[position].isSelected=!categories[position].isSelected
+        categoriesAdapter.notifyItemChanged(position)
+        updateTasks()
+
+    }
+
+    private fun onItemSelected(position: Int){
+        tasks[position].isSelected=!tasks[position].isSelected
+        updateTasks()
+    }
+
 
     /**
      * Avisa al adaptador que hay nuevos items
      *
      */
     private fun updateTasks(){
+        val selectedCategories:List<TaskCategory> = categories.filter { it.isSelected }
+        val newTasks = tasks.filter { selectedCategories.contains(it.category) }
+        taskAdapter.task = newTasks
         taskAdapter.notifyDataSetChanged()
 
     }
