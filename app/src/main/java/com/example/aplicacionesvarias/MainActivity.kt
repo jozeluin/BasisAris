@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var text=getString(R.string.todo_dialog_category_Personal)
+
 
         val btnSaludApp=findViewById<Button>(R.id.btnSaludApp)
         val btnTODOApp=findViewById<Button>(R.id.btnTODO)

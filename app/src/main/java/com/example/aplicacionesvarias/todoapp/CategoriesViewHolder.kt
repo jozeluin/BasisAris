@@ -1,5 +1,6 @@
 package com.example.aplicacionesvarias.todoapp
 
+import android.content.Context
 import android.view.View
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -16,8 +17,8 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
 
 
-
     fun render(taskCategory: TaskCategory, onItemSelected: (Int) -> Unit) {
+
 
         var color = if (taskCategory.isSelected) {
             R.color.todo_background_card
@@ -33,7 +34,7 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         when (taskCategory) {
             TaskCategory.Business -> {
-                tvcategori_name.text ="Negocios"
+                tvcategori_name.text =tvcategori_name.context.getString(R.string.todo_dialog_category_Bussines)
                 vwdivider.setBackgroundColor(
                     ContextCompat.getColor(vwdivider.context, R.color.todo_business_category)
                 )
@@ -55,4 +56,6 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         }
 
     }
+
+
 }
