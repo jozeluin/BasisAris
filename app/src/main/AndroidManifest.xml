@@ -13,9 +13,12 @@
         android:theme="@style/Theme.AndroidMaster"
         tools:targetApi="31">
         <activity
-            android:name=".todoapp.TodoActivity"
-            android:theme="@style/Theme.TODOapp"
+            android:name=".superheroapp.SuperHeroListActivity"
             android:exported="false" />
+        <activity
+            android:name=".todoapp.TodoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TODOapp" />
         <activity
             android:name=".firstapp.ResultaImcActivity"
             android:exported="false" />
