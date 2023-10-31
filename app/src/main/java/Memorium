@@ -68,6 +68,15 @@ Parte 2 App SuperheroList
 
 Retrofit, consumo de apis.
 
+1:02
+Configuracion de retrofit. Con la dataclass adecuadas. Hemos pedido una informacion
+al api y nos la ha devuelto. Ahora colocaremos una progressbar
+
+1:07
+Logica del Recyclerview
+
+1:18:18
+Hemos conseguido sacar el listado por un recyclerview basico
 
 
 
