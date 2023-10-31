@@ -9,7 +9,7 @@ import com.example.aplicacionesvarias.databinding.ActivitySuperHeroListBinding
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class SuperHeroListActivity : AppCompatActivity() {
+class  SuperHeroListActivity : AppCompatActivity() {
 
     private lateinit var bindig:ActivitySuperHeroListBinding
     private lateinit var retrofit: Retrofit
