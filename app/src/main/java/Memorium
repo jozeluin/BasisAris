@@ -78,7 +78,10 @@ Logica del Recyclerview
 1:18:18
 Hemos conseguido sacar el listado por un recyclerview basico
 
-
+1:45:52
+Modificamos SuperHeroDataResponse para adquirir mas datos. Creando SuperheroImageResponse()
+para poder adquirir una imagen. Reformamos el item_superhero. Colocamos la imagen y le
+agregamos el atributo scaletype que cambia la forma de ver la imagen
 
 
 

@@ -29,6 +29,7 @@ class  SuperHeroListActivity : AppCompatActivity() {
         setContentView(bindig.root)
         retrofit=getretrofit()
         initUI()
+        Log.i("JoseLuis","Estoy en SuperheroActivity-OnCreate")
     }
 
     private fun initUI() {
@@ -49,15 +50,17 @@ class  SuperHeroListActivity : AppCompatActivity() {
         bindig.rvSuperhero.layoutManager=LinearLayoutManager(this)
         bindig.rvSuperhero.adapter=adapter
 
+        Log.i("JoseLuis","Estoy en SuperheroActivity-initUi")
+
     }
 
     private fun searchByName(query: String) {
         bindig.progressBar.isVisible=true
         CoroutineScope(Dispatchers.IO).launch{
-            val myResponse=retrofit.create(ApiService::class.java).getSuperheroes(query)
+            val myResponse=
+                retrofit.create(ApiService::class.java).getSuperheroes(query)
             if(myResponse.isSuccessful){
                 Log.i("JoseLuis","funciono :)")
-
                 val response: SuperHeroDataResponse? =myResponse.body()
                 if(response!=null){
                     Log.i("JoseLuis",response.toString())
@@ -65,14 +68,16 @@ class  SuperHeroListActivity : AppCompatActivity() {
                         //por que si no da error lo siguiente
                         adapter.updateList(response.superherores)
                         bindig.progressBar.isVisible=false
-                    }
+                   }
 
                 }
-            }else{
+            }else
+            {
                 Log.i("JoseLuis","No funciono :(")
             }
 
         }
+        Log.i("JoseLuis","Estoy en SuperheroActivity-searchByname")
 
     }
 
