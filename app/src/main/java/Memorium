@@ -83,8 +83,19 @@ Modificamos SuperHeroDataResponse para adquirir mas datos. Creando SuperheroImag
 para poder adquirir una imagen. Reformamos el item_superhero. Colocamos la imagen y le
 agregamos el atributo scaletype que cambia la forma de ver la imagen
 
+1:50:52
+Funcion lambda para el cuando pulsemos en un item del reciclerView
+1:59
+Ahora en esa nueva pantalla de detalle hacemos que haga una llamada con retrofit
+para conseguir la informacion
 
+2:07:51
+Hemos creado otra dataclass para hacer otra llamada de datos,superheroDataResponse,
 
+2:28
+Hemos acabado de hacer la llamada retrofit, de los detalles. Ya al clicar vemos otra pantalla
+con una imagen y un cardview, por ahora vacio
+Estamo creando el layout activity_detail_superhero creando una grafica con views
 
 
 

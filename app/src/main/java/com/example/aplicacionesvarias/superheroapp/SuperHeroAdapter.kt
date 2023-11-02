@@ -5,10 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.aplicacionesvarias.R
 
-class SuperHeroAdapter(var superheroList:List<SuperHeroItemResponse> = emptyList()) :
+class SuperHeroAdapter(
+    var superheroList: List<SuperHeroItemResponse> = emptyList(),
+    private val onItemSelected: (String) -> Unit
+) :
     RecyclerView.Adapter<SuperheroViewHolder>() {
 
-    fun updateList(superheroList:List<SuperHeroItemResponse>){
+    fun updateList(superheroList: List<SuperHeroItemResponse>) {
         this.superheroList = superheroList
         notifyDataSetChanged()
     }
@@ -17,17 +20,18 @@ class SuperHeroAdapter(var superheroList:List<SuperHeroItemResponse> = emptyList
      * Aqui abajo especificamos el layout a utilizar
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperheroViewHolder {
-        val layoutInflater=LayoutInflater.from(parent.context)
-        return SuperheroViewHolder(layoutInflater.inflate(R.layout.item_superhero,parent,false))
+        val layoutInflater = LayoutInflater.from(parent.context)
+        return SuperheroViewHolder(layoutInflater.inflate(R.layout.item_superhero, parent, false))
     }
 
     /**
      * Posicion de la lista que se entrega al viewholder para que la pinte
      */
     override fun onBindViewHolder(viewholder: SuperheroViewHolder, position: Int) {
-               viewholder.bind(superheroList[position])
+        viewholder.bind(superheroList[position],onItemSelected)
     }
-    override fun getItemCount()=superheroList.size
+
+    override fun getItemCount() = superheroList.size
 
 
 }

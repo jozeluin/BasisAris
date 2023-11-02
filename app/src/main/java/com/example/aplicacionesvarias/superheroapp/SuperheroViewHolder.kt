@@ -9,11 +9,11 @@ class SuperheroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
 
     private var bindig=ItemSuperheroBinding.bind(view)
-    fun bind(superHeroItemResponse: SuperHeroItemResponse) {
+    fun bind(superHeroItemResponse: SuperHeroItemResponse, onItemSelected: (String) -> Unit) {
 
         bindig.tvSuperheroName.text=superHeroItemResponse.name
-
         Picasso.get().load(superHeroItemResponse.superheroImage.url).into(bindig.ivSuperhero)
+        bindig.root.setOnClickListener{onItemSelected(superHeroItemResponse.superheroId)}
 
     }
 
