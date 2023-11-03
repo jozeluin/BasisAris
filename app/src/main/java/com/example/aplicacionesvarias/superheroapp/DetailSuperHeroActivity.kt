@@ -21,6 +21,7 @@ class DetailSuperHeroActivity : AppCompatActivity() {
     }
 
     private lateinit var binding:ActivityDetailSuperHeroBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityDetailSuperHeroBinding.inflate(layoutInflater)
@@ -43,6 +44,8 @@ class DetailSuperHeroActivity : AppCompatActivity() {
         Picasso.get().load(superhero.image.url).into(binding.ivSuperhero)
         binding.tvSuperheroName.text=superhero.name
         prepareStats(superhero.powerstats)
+        binding.tvSuperheroRealName.text=superhero.biography.fullName
+        binding.tvPublisher.text=superhero.biography.publisher
 
     }
 
