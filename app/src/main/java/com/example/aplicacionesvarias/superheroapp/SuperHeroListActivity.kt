@@ -26,9 +26,11 @@ class SuperHeroListActivity : AppCompatActivity() {
     private lateinit var adapter: SuperHeroAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         bindig = ActivitySuperHeroListBinding.inflate(layoutInflater)
         setContentView(bindig.root)
+
         retrofit = getretrofit()
         initUI()
         Log.i("JoseLuis", "Estoy en SuperheroActivity-OnCreate")

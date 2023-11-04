@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutGeneral"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_marginHorizontal="30dp"
+    android:layout_marginTop="200dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,20 +14,31 @@
         android:id="@+id/btnSaludApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aplicacion Salud"/>
+
+        android:layout_marginTop="20dp"
+        android:text="Aplicacion Salud" />
 
     <Button
         android:id="@+id/btnTODO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:text="TDOD App"/>
+
+        android:text="TDOD App" />
+
     <Button
         android:id="@+id/btnSuperHero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:text="SuperHeroApp"/>
+        android:text="SuperHeroApp" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Settings" />
 
 
 </LinearLayout>

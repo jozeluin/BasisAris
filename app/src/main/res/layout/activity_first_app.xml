@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_app"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="16dp"
+    android:paddingTop="80dp"
     tools:context=".firstapp.ImcApp">
 
     <androidx.cardview.widget.CardView
