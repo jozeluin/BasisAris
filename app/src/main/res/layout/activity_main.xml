@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LayoutGeneral"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30dp"
-    android:layout_marginTop="200dp"
-    android:orientation="vertical"
+    android:layout_margin="32dp"
+
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnSaludApp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="20dp"
-        android:text="Aplicacion Salud" />
+        android:text="Aplicacion Salud"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/btnTODO"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:layout_constraintTop_toBottomOf="@id/btnSaludApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
         android:text="TDOD App" />
 
@@ -30,15 +34,21 @@
         android:id="@+id/btnSuperHero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        app:layout_constraintTop_toBottomOf="@id/btnTODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="SuperHeroApp" />
 
     <Button
         android:id="@+id/btnSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSuperHero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:text="Settings" />
 
+  
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
