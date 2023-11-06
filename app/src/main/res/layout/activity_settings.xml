@@ -9,16 +9,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center_vertical"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/IvSettingsAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:src="@drawable/ic_dark_mode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            app:tint="@color/ic_color" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -28,39 +29,39 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:text="Modo Oscuro"
-                />
+                android:textColor="@color/settings_text_title"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
-                android:textSize="11sp"
                 android:layout_height="wrap_content"
                 android:text="Activa el modo oscuro para un cambio visual"
-                />
+                android:textSize="11sp" />
 
         </LinearLayout>
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/SwitchDarkMode"
             android:layout_width="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:gravity="center_vertical"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/IvSettingsAdio"
-            android:layout_margin="16dp"
-            android:src="@drawable/ic_dark_mode"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_bluetooth" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -70,25 +71,113 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/settings_text_title"
                 android:layout_height="wrap_content"
-                android:text="Modo Oscuro"
-                />
+                android:text="Activar Bluetooth"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
-                android:textSize="11sp"
                 android:layout_height="wrap_content"
-                android:text="Activa el modo oscuro para un cambio visual"
-                />
+                android:text="Conectar perifericos sin cables"
+                android:textSize="11sp" />
 
         </LinearLayout>
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/SwitchBluetooth"
             android:layout_width="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" />
 
     </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_volume" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/settings_text_title"
+                android:layout_height="wrap_content"
+                android:text="Subir el volumen "
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rsVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_vibration" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/settings_text_title"
+                android:layout_height="wrap_content"
+                android:text="Vibrar en las llamadas"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/SwitchVibration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp" />
+
 </LinearLayout>
